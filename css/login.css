@@ -1,0 +1,76 @@
+
+#main {
+	position: relative;
+	width: 800px;
+	height: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logo {
+	position: absolute;
+	top: 20px;
+	left: 25px;
+}
+
+.topspace {
+	height:100px;
+}
+html > body #login {
+	height: 380px;
+	width: 780px;
+}
+#login {
+	position: relative;
+	border: solid 1px #ccc;
+	height: 400px;
+	width:800px;
+	padding: 10px;
+}
+
+#title-login {
+	
+}
+
+#copyright {
+	padding-top: 10px;
+	text-align:center;
+}
+
+html > body .col-label {
+	width:110px;
+}
+.col-label {
+	padding-top: 15px;
+	float:left;
+	width:120px;
+	text-align:right;
+	padding-right:10px;
+}
+.col-input {
+	padding-top: 15px;
+	float:left;
+	width:300px;
+}
+
+.typeinp {
+	width: 200px;
+	border: solid 1px #ccc;
+	padding-top:4px;
+	padding-bottom:4px;
+	padding-left:5px;
+}
+.typebtn {
+	padding: 5px;
+	width: 100px;
+	height: 25px;
+	font-size: 14px;
+	text-align: center;
+}
+
+.error {
+	padding-top:20px;
+	font-size:16px;
+	font-weight: bold;
+	color:#ff0000;
+}

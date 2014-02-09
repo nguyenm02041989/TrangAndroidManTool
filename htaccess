@@ -1,0 +1,22 @@
+Options -Indexes 
+RewriteEngine On
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule .* - [L]
+DirectoryIndex index.php index.html index.htm
+ErrorDocument 400 /bad_request.html
+ErrorDocument 403 /bad_forbidden.html
+ErrorDocument 404 /bad_notfound.html
+RewriteRule ^controller/(.*) - [NC,L] 
+RewriteRule ^css/(.*) - [NC,L] 
+RewriteRule ^android/(.*) - [NC,L] 
+RewriteRule ^images/(.*) - [NC,L] 
+RewriteRule ^js/(.*) - [NC,L] 
+RewriteRule ^libs/(.*) - [NC,L] 
+RewriteRule ^model/(.*) - [NC,L] 
+RewriteRule ^res/(.*) - [NC,L] 
+RewriteRule ^view/(.*) - [NC,L] 
+RewriteCond %{REQUEST_FILENAME} -s [OR]
+RewriteCond %{REQUEST_FILENAME} -l [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^.*$ - [NC,L]
+RewriteRule ^.*$ index.php [NC,L]

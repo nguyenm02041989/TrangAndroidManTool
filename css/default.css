@@ -1,0 +1,81 @@
+@CHARSET "UTF-8";
+html{
+	height:100%;
+}
+
+body{
+	text-align: center;
+	height: 100%;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #2a2a2a;
+	line-height: 15px;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Content Headers */
+h1 {
+	color: #2a2a2a;
+	font-size: 18px;
+	line-height: 22px;
+	margin: 0 0 14px 0;	
+}
+h2 {
+	color: #5b7aa0;
+	font-size: 14px;
+	line-height: 18px;
+	margin: 0px 0 8px 0;	
+}
+
+/* General section like icons, shortcuts etc.. */
+img {
+	border: 0;	
+}
+.floatleft {
+	float: left;	
+}
+.floatright {
+	float: right;	
+}
+.clear {
+	clear: both;	
+}
+.relative {
+	position: relative;	
+}
+a:link,
+a:visited,
+a:active
+{
+	text-decoration: none;
+	font-size: 12px;
+	color: #5b7aa0;
+}
+a:hover {
+	text-decoration: underline;
+	color: #ff0000;
+}
+a.active:link,
+a.active:active,
+a.active:visited
+{
+	text-decoration: underline;
+	color: #ff0000;
+}
+p {
+	margin: 0px;
+	font-size: 12px;
+	line-height: 16px;
+}
+div {
+	text-align: left;	
+}
+.lineseperator {
+	border-bottom: solid 1px #ccc;
+	margin: 4px 0 4px 0;
+}
+
