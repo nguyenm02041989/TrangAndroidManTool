@@ -427,6 +427,33 @@ class GcmController 	extends BaseController
 		$this->mModel->ReActivateUserDevice($regId);
 	}
 	
+	public function ReActivateDeviceTask() {
+		
+		// This is the registration ID from Google
+		$gcmId = FrontIndexController::GetRequest("regid");
+		if(strlen($gcmId) > 255) {
+			$gcmId = substr($gcmId, 0, 255);
+		}
+		
+		// This is the App ID. A developer can have multiple Apps. So with this code, we know
+		// which App we have to call.
+		$appId = FrontIndexController::GetRequest("appid");
+		if(strlen($appId) > 50) {
+			$appId = substr($appId, 0, 50);
+		}
+		
+		$out = "";
+		if(strlen($gcmId) > 0 && strlen($appId) > 0) {
+				
+			$this->ReActivateUserDevice($gcmId);
+				
+			$this->GetResponseJson(RESPONSE_SUCCESS, $out);
+			return $out;
+		}
+		$this->GetResponseJson(RESPONSE_FAILURE, $out);
+		return $out;
+	}
+		
 	/**
 	 * Unregister the device
 	 *
@@ -437,6 +464,32 @@ class GcmController 	extends BaseController
 		$this->mModel->RemoveUserDevice($regId);
 	}	
 	
+	public function UnRegisterDeviceTask() {
+		
+		// This is the registration ID from Google
+		$gcmId = FrontIndexController::GetRequest("regid");
+		if(strlen($gcmId) > 255) {
+			$gcmId = substr($gcmId, 0, 255);
+		}
+		
+		// This is the App ID. A developer can have multiple Apps. So with this code, we know
+		// which App we have to call.
+		$appId = FrontIndexController::GetRequest("appid");
+		if(strlen($appId) > 50) {
+			$appId = substr($appId, 0, 50);
+		}
+		
+		$out = "";
+		if(strlen($gcmId) > 0 && strlen($appId) > 0) {
+			
+			$this->UnRegisterDevice($gcmId);
+			
+			$this->GetResponseJson(RESPONSE_SUCCESS, $out);
+			return $out;
+		}
+		$this->GetResponseJson(RESPONSE_FAILURE, $out);
+		return $out;
+	}
 
 	/**
 	 * Search the data for specific records. Very simple.
